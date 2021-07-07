@@ -2,8 +2,10 @@
 
 Contributors: dhmskrn
 Donate link: https://paypal.me/dhimaskirana
-Tested up to: 5.5.3
+Tested up to: 5.7.2
 Stable tag: 0.6.2
+Requires at least: 5.0
+Requires PHP: 5.6
 
 Mahal WordPress Theme, (C) 2014 Dhimas Kirana - http://www.dhimaskirana.com/
 
@@ -41,11 +43,31 @@ Mahal is free WordPress Themes. One column and fully responsive. Randomized head
 - html5.js - https://github.com/aFarkas/html5shiv - Licensed under MIT/GPL2
 - SlickNav Responsive Mobile Menu - https://github.com/ComputerWolf/SlickNav - Licensed under MIT
 
+== Frequently Asked Questions ==
+
+= How to install mahal theme =
+1. Login your WordPress dashboard.
+2. Go to "Appearance" -> "Theme" and click on "Add New" button.
+3. Click on "Upload Theme" button and choose the theme's zip file you have downloaded.
+4. Click on "Install Now" button.
+5. Activate the theme
+
+Alternatively,
+
+1. Login to your WordPress dashboard.
+2. Go to "Appearance" -> "Theme" and click on "Add New" button.
+3. Search for "mahal".
+4. Click on Install and Activate.
+
 == Changelog ==
 0.6.2
 - Fixing pingback url
 - Fixing escape url
-- Fix translation L24 functions.php
+- Fixing translation L24 functions.php
+- Fixing link
+- Fixing header
+- Fixing readme files
+- Fixing translation file
 0.6.1
 - Add semicolon
 0.6
