@@ -63,11 +63,12 @@ Alternatively,
 0.6.2
 - Fixing pingback url
 - Fixing escape url
-- Fixing translation L24 functions.php
+- Fixing translation
 - Fixing link
 - Fixing header
 - Fixing readme files
 - Fixing translation file
+- Fixing some functions
 0.6.1
 - Add semicolon
 0.6

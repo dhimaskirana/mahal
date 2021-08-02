@@ -13,9 +13,18 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="site-info">
-		<a href="<?php echo esc_url(__('http://wordpress.org/', 'mahal')); ?>"><?php printf(__('%s', 'mahal'), 'WordPress'); ?></a>
+
+		<a href="<?php echo esc_url(__('https://wordpress.org/', 'mahal')); ?>">
+			<?php
+			/* translators: %s: CMS name, i.e. WordPress. */
+			printf(esc_html__('Proudly powered by %s', 'mahal'), 'WordPress');
+			?>
+		</a>
 		<span class="sep"> | </span>
-		<?php printf(__('Design Themes by %1$s', 'mahal'), '<a href="http://www.dhimaskirana.com/" rel="designer">Dhimas Kirana</a>'); ?>
+		<?php
+		/* translators: 1: Theme name, 2: Theme author. */
+		printf(esc_html__('Design Themes by %1$s by %2$s.', 'mahal'), 'mahal', '<a href="https://www.dhimaskirana.com/" rel="designer">Dhimas Kirana</a>');
+		?>
 	</div><!-- .site-info -->
 	<div class="backtotop"><span id="top" class="dashicons dashicons-arrow-up-alt2"></span></div>
 </footer><!-- #colophon -->

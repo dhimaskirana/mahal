@@ -37,24 +37,18 @@
 		?>
 			<?php
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list(__(', ', 'mahal'));
-			if ($categories_list && mahal_categorized_blog()) :
-			?>
-				<span class="cat-links">
-					<span class="dashicons dashicons-category"></span> <?php printf(__('%1$s', 'mahal'), $categories_list); ?>
-				</span>
-			<?php endif; // End if categories 
-			?>
+			$categories_list = get_the_category_list(esc_html__(', ', 'mahal'));
+			if ($categories_list && mahal_categorized_blog()) {
+				/* translators: 1: list of categories. */
+				printf('<span class="cat-links"><span class="dashicons dashicons-category"></span>' . esc_html__('Posted in %1$s', 'mahal') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
 
-			<?php
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list('', __(', ', 'mahal'));
-			if ($tags_list) :
-			?>
-				<span class="tags-links">
-					<span class="dashicons dashicons-tag"></span> <?php printf(__('%1$s', 'mahal'), $tags_list); ?>
-				</span>
-			<?php endif; // End if $tags_list 
+			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'mahal'));
+			if ($tags_list) {
+				/* translators: 1: list of tags. */
+				printf('<span class="tags-links"><span class="dashicons dashicons-tag">' . esc_html__('Tagged %1$s', 'mahal') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
 			?>
 		<?php endif; // End if 'post' == get_post_type() 
 		?>
