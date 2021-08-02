@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php wp_body_open(); ?>
 	<div id="page" class="hfeed site">
 
 		<header id="masthead" class="site-header" <?php if (get_header_image()) : ?> style="background:url(<?php header_image(); ?>) fixed;" <?php endif; ?> role="banner">
