@@ -527,7 +527,7 @@ a:hover, a:focus, a:active {
 
 .main-navigation ul ul a:hover {}
 
-.main-navigation ul li:hover>ul, .main-navigation ul li:focus>ul {
+.main-navigation ul li.open>ul, .main-navigation ul li.open>ul {
 	display: block;
 	right: 0;
 	opacity: 1;

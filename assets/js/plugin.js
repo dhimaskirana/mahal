@@ -10,4 +10,19 @@ jQuery(document).ready(function ($) {
 		label: ''
 	});
 
+	// Accessibility
+	$('li.menu-item-has-children').hover(
+		function () {
+			$(this).addClass('open');
+		},
+		function () {
+			$(this).removeClass('open');
+		}
+	);
+
+	$('li.menu-item-has-children a').click(function (event) {
+		event.preventDefault();
+		$('li.menu-item-has-children').toggleClass('open');
+	});
+
 });
