@@ -1,8 +1,11 @@
 <?php
 
 /**
- * Custom Avatar
+ * Mahal Custom Avatar
+ *
+ * @package Mahal
  */
+
 function mahal_custom_avatar($wp_customize) {
     $wp_customize->add_section('custom_avatar_section', array(
         'title'       => __('Custom Avatar', 'mahal'),

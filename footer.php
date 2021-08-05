@@ -1,19 +1,22 @@
 <?php
 
 /**
- * The template for displaying the footer.
+ * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package Mahal
  */
+
 ?>
+
 <?php get_sidebar('footer'); ?>
 </div><!-- #content -->
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+<footer id="colophon" class="site-footer">
 	<div class="site-info">
-
 		<a href="<?php echo esc_url(__('https://wordpress.org/', 'mahal')); ?>">
 			<?php
 			/* translators: %s: CMS name, i.e. WordPress. */
@@ -23,10 +26,10 @@
 		<span class="sep"> | </span>
 		<?php
 		/* translators: 1: Theme name, 2: Theme author. */
-		printf(esc_html__('Design Themes by %1$s by %2$s.', 'mahal'), 'mahal', '<a href="https://www.dhimaskirana.com/" rel="designer">Dhimas Kirana</a>');
+		printf(esc_html__('Theme: %1$s by %2$s.', 'mahal'), 'mahal', '<a href="https://www.dhimaskirana.com/">Dhimas Kirana</a>');
 		?>
 	</div><!-- .site-info -->
-	<div class="backtotop"><span id="top" class="dashicons dashicons-arrow-up-alt2"></span></div>
+	<div class="backtotop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });return false;"><span id="top" class="dashicons dashicons-arrow-up-alt2"></span></div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

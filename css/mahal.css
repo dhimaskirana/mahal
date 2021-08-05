@@ -21,7 +21,6 @@
 	12.1 - Captions
 	12.2 - Galleries
 13.0 - Gridiculous
-14.0 - SlickNav Responsive Mobile Menu
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -455,14 +454,14 @@ a:hover, a:focus, a:active {
 	padding: .5em 0;
 }
 
-.main-navigation .row {
+.main-navigation .row, .main-navigation .c12 {
 	margin: 0;
 }
 
 .main-navigation ul {
 	list-style: none;
 	margin: 0 auto;
-	display: table;
+	display: none;
 }
 
 .main-navigation li {
@@ -499,22 +498,22 @@ a:hover, a:focus, a:active {
 	vertical-align: top;
 }
 
+.main-navigation .sub-menu .menu-item-has-children>a:after, .main-navigation .sub-menu .page_item_has_children>a:after {
+	content: '\f139';
+}
+
 .main-navigation ul ul {
 	background: #32373c;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	display: none;
 	float: left;
-	left: 0;
+	left: -999em;
 	top: 100%;
 	position: absolute;
 	z-index: 99999;
-	width: 250px;
+	width: auto;
 }
 
-.main-navigation ul ul ul {
-	left: 100%;
-	top: 0;
-}
+.main-navigation ul ul ul {}
 
 .main-navigation ul ul a {
 	width: 200px;
@@ -527,12 +526,14 @@ a:hover, a:focus, a:active {
 
 .main-navigation ul ul a:hover {}
 
-.main-navigation ul li.open>ul, .main-navigation ul li.open>ul {
+.main-navigation ul li.focus>ul, .main-navigation ul li:hover>ul {
 	display: block;
-	right: 0;
-	opacity: 1;
-	transform: translateY(0);
-	transition: opacity 0.15s linear, transform 0.15s linear;
+	left: 0;
+}
+
+.main-navigation ul ul li:hover>ul, .main-navigation ul ul li.focus>ul {
+	display: block;
+	left: 100%;
 }
 
 .main-navigation li.current_page_item>a, .main-navigation li.current-menu-item>a {
@@ -541,18 +542,79 @@ a:hover, a:focus, a:active {
 	font-weight: bold;
 }
 
-.slicknav_menu {
-	display: none;
+/* Small menu. */
+
+.menu-toggle {
+	display: block;
+	float: right;
+	box-shadow: none;
+	border-radius: 20%;
+	border: none;
 }
 
-/* Small menu */
+.menu-toggle:hover {
+	background: #005aff;
+	color: #fff;
+}
 
-@media screen and (max-width: 600px) {
-	.slicknav_menu {
-		display: block;
-	}
-	.main-navigation {
+.menu-toggle:focus {
+	box-shadow: none;
+	background: #e74c3c;
+	color: #fff;
+}
+
+.main-navigation.toggled .dashicons-menu:before {
+	content: "\f158";
+}
+
+.main-navigation.toggled .primary-menu-list {
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.main-navigation.toggled ul {
+	margin: 0;
+}
+
+.main-navigation.toggled li {
+	display: block;
+	float: none;
+}
+
+.main-navigation.toggled a {
+	padding: .5em 20px;
+	width: 100%;
+}
+
+.main-navigation.toggled ul ul {
+	box-shadow: none;
+	float: none;
+	top: 100%;
+	position: relative;
+	height: 0;
+}
+
+.main-navigation.toggled ul li.focus>ul, .main-navigation ul li:hover>ul {
+	display: block;
+	left: 0;
+	height: auto;
+}
+
+.main-navigation.toggled .sub-menu .menu-item-has-children>a:after, .main-navigation.toggled .sub-menu .page_item_has_children>a:after {
+	content: '\f140';
+}
+
+.main-navigation.toggled ul ul li:hover>ul, .main-navigation.toggled ul ul li.focus>ul {
+	display: block;
+	left: 0;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
 		display: none;
+	}
+	.main-navigation ul {
+		display: table;
 	}
 }
 
@@ -574,6 +636,7 @@ a:hover, a:focus, a:active {
 
 .nav-previous a, .nav-next a {
 	color: #4D4D4D;
+	text-decoration: none;
 	display: inline-block;
 	padding: 1em;
 	background: #fff;
@@ -697,6 +760,10 @@ a:hover, a:focus, a:active {
 
 .site-header {}
 
+.site-header .row {
+	margin: 0;
+}
+
 .site-header .avatar {
 	border-radius: 99% 99% 99% 99%;
 	box-shadow: 0 0 0 6px #fff;
@@ -706,6 +773,9 @@ a:hover, a:focus, a:active {
 	position: absolute;
 	text-align: center;
 	z-index: 9;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
 }
 
 .site-branding {
@@ -741,9 +811,7 @@ a:hover, a:focus, a:active {
 .page-header {
 	padding: 1em;
 	margin-top: 1em;
-	background: #fff;
-	border: 1px solid #eee;
-	border-radius: 3px;
+	border-bottom: dotted #ddd 1px;
 }
 
 .page-title {
@@ -970,12 +1038,14 @@ blockquote p {
 
 .entry-footer a {
 	text-decoration: none;
-	color: #aaa;
-	border-bottom: solid 1px;
+	color: #fff;
+	background-color: #22313F;
+	padding: .5em;
 }
 
 .entry-footer a:hover {
-	color: #1abc9c;
+	color: #fff;
+	background-color: #e74c3c;
 }
 
 .entry-footer .cat-links {
@@ -989,7 +1059,7 @@ blockquote p {
 .entry-footer .dashicons {
 	font-size: 1.5em;
 	margin-right: .2em;
-	color: #aaa;
+	color: #fff;
 }
 
 .byline, .updated {
@@ -1548,17 +1618,11 @@ embed, iframe, object {
 	html {
 		font-size: 55%;
 	}
-	.main-navigation .c12 {
-		margin: 0;
-	}
 }
 
 @media screen and (min-width:240px) and (max-width:320px) {
 	html {
 		font-size: 75%;
-	}
-	.main-navigation .c12 {
-		margin: 0;
 	}
 }
 
@@ -1566,232 +1630,10 @@ embed, iframe, object {
 	html {
 		font-size: 85%;
 	}
-	.main-navigation .c12 {
-		margin: 0;
-	}
 }
 
 @media screen and (min-width:480px) and (max-width:768px) {
 	html {
 		font-size: 90%;
 	}
-	.main-navigation .c12 {
-		margin: 0;
-	}
-}
-
-/*--------------------------------------------------------------
-14.0 SlickNav Responsive Mobile Menu
-	 (c) 2015 Josh Cope
-	 licensed under MIT
---------------------------------------------------------------*/
-
-.slicknav_btn {
-	position: relative;
-	display: block;
-	vertical-align: middle;
-	float: right;
-	padding: 0.438em 0.625em 0.438em 0.625em;
-	line-height: 1.125em;
-	cursor: pointer;
-}
-
-.slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar {
-	margin-top: 0.188em;
-}
-
-.slicknav_menu {
-	*zoom: 1;
-}
-
-.slicknav_menu .slicknav_menutxt {
-	display: block;
-	line-height: 1.188em;
-	float: left;
-}
-
-.slicknav_menu .slicknav_icon {
-	float: left;
-	width: 1.125em;
-	height: 0.875em;
-	margin: 0.188em 0 0 0.438em;
-}
-
-.slicknav_menu .slicknav_icon:before {
-	background: transparent;
-	width: 1.125em;
-	height: 0.875em;
-	display: block;
-	content: "";
-	position: absolute;
-}
-
-.slicknav_menu .slicknav_no-text {
-	margin: 0;
-}
-
-.slicknav_menu .slicknav_icon-bar {
-	display: block;
-	width: 1.125em;
-	height: 0.125em;
-	-webkit-border-radius: 1px;
-	-moz-border-radius: 1px;
-	border-radius: 1px;
-	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-}
-
-.slicknav_menu:before {
-	content: " ";
-	display: table;
-}
-
-.slicknav_menu:after {
-	content: " ";
-	display: table;
-	clear: both;
-}
-
-.slicknav_nav {
-	clear: both;
-}
-
-.slicknav_nav ul {
-	display: block;
-}
-
-.slicknav_nav li {
-	display: block;
-}
-
-.slicknav_nav .slicknav_arrow {
-	font-size: 0.8em;
-	margin: 0 0 0 0.4em;
-}
-
-.slicknav_nav .slicknav_item {
-	cursor: pointer;
-}
-
-.slicknav_nav .slicknav_item a {
-	display: inline;
-}
-
-.slicknav_nav .slicknav_row {
-	display: block;
-}
-
-.slicknav_nav a {
-	display: block;
-}
-
-.slicknav_nav .slicknav_parent-link a {
-	display: inline;
-}
-
-.slicknav_brand {
-	float: left;
-}
-
-.slicknav_menu {
-	font-size: 16px;
-	box-sizing: border-box;
-	background: #23282d;
-	padding: 5px;
-}
-
-.slicknav_menu * {
-	box-sizing: border-box;
-}
-
-.slicknav_menu .slicknav_menutxt {
-	color: #fff;
-	font-weight: bold;
-	text-shadow: 0 1px 3px #000;
-}
-
-.slicknav_menu .slicknav_icon-bar {
-	background-color: #fff;
-}
-
-.slicknav_btn {
-	margin: 5px 5px 6px;
-	text-decoration: none;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	background-color: #000;
-}
-
-.slicknav_nav {
-	color: #fff;
-	margin: 0;
-	padding: 0;
-	font-size: 0.875em;
-	list-style: none;
-	overflow: hidden;
-}
-
-.slicknav_nav ul {
-	list-style: none;
-	overflow: hidden;
-	padding: 0;
-	margin: 0 0 0 20px;
-}
-
-.slicknav_nav .slicknav_row {
-	padding: 5px 10px;
-	margin: 2px 5px;
-}
-
-.slicknav_nav .slicknav_row:hover {
-	background: #32373c;
-	color: #fff;
-}
-
-.slicknav_nav a {
-	padding: 5px 10px;
-	margin: 2px 5px;
-	text-decoration: none;
-	color: #aaa;
-}
-
-.slicknav_nav a:hover {
-	background: #32373c;
-	color: #fff;
-}
-
-.slicknav_row:hover>a {
-	background: #32373c;
-	color: #fff;
-}
-
-.slicknav_nav .current_page_item a, .slicknav_nav .current-menu-item a {
-	background-color: #000;
-	color: #fff;
-	font-weight: bold;
-}
-
-.slicknav_nav .slicknav_txtnode {
-	margin-left: 15px;
-}
-
-.slicknav_nav .slicknav_item a {
-	padding: 0;
-	margin: 0;
-}
-
-.slicknav_nav .slicknav_parent-link a {
-	padding: 0;
-	margin: 0;
-}
-
-.slicknav_brand {
-	color: #fff;
-	font-size: 18px;
-	line-height: 30px;
-	padding: 7px 12px;
-	height: 44px;
 }

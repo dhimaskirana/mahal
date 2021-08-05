@@ -1,30 +1,19 @@
-== Mahal Themes WordPress ==
+=== Mahal ===
 
 Contributors: dhmskrn
+Tags: one-column, custom-background, custom-logo, custom-menu, threaded-comments, featured-images, translation-ready
 Donate link: https://paypal.me/dhimaskirana
-Tested up to: 5.7.2
-Stable tag: 0.6.2
-Requires at least: 5.0
+Requires at least: 4.5
+Tested up to: 5.4
 Requires PHP: 5.6
+Stable tag: 0.7
+License: GNU General Public License v2 or later
+License URI: LICENSE
 
-Mahal WordPress Theme, (C) 2014 Dhimas Kirana - http://www.dhimaskirana.com/
-
-== License ==
-
-License: GNU General Public License v2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-This theme is FREE. Hope you will enjoy with this theme.
-This theme, like WordPress, is licensed and distributed under the terms of the GNU General Public License Version 2.
-All the theme files, fonts, scripts, images and everything else, are licensed under GNU General Public License Version 2, see file license.txt.
-
-Mahal is based on Underscores - http://underscores.me/
-Copyright: Automattic, automattic.com
-Licensed under GPL
-
-Lato font used in the themes are designed by Łukasz Dziedzic, and published under the Open Font License - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+Mahal WordPress Theme, (C) 2014 Dhimas Kirana - https://www.dhimaskirana.com/
 
 == Description ==
+
 Mahal is free WordPress Themes. One column and fully responsive. Randomized header background.
 
 == Features ==
@@ -36,21 +25,11 @@ Mahal is free WordPress Themes. One column and fully responsive. Randomized head
 * Custom menu
 * 2 footer widget areas
 
-== Components ==
-- Underscores Starter Themes - http://underscores.me/ - Licensed under GPL
-- Gridiculo.us Grid System by c.bavota - http://gridiculo.us/ - Licensed under GPL v2.
-- Dashicons - https://developer.wordpress.org/resource/dashicons/ - Licensed under GPLv2
-- html5.js - https://github.com/aFarkas/html5shiv - Licensed under MIT/GPL2
-- SlickNav Responsive Mobile Menu - https://github.com/ComputerWolf/SlickNav - Licensed under MIT
+== Installation ==
 
-== Frequently Asked Questions ==
-
-= How to install mahal theme =
-1. Login your WordPress dashboard.
-2. Go to "Appearance" -> "Theme" and click on "Add New" button.
-3. Click on "Upload Theme" button and choose the theme's zip file you have downloaded.
-4. Click on "Install Now" button.
-5. Activate the theme
+1. In your admin panel, go to Appearance > Themes and click the Add New button.
+2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
+3. Click Activate to use your new theme right away.
 
 Alternatively,
 
@@ -59,7 +38,22 @@ Alternatively,
 3. Search for "mahal".
 4. Click on Install and Activate.
 
+== Frequently Asked Questions ==
+
+* Does this theme support any plugins?
+Mahal includes support for WooCommerce and for Infinite Scroll in Jetpack.
+
+* How to change the avatar?
+The avatar default use gravatar, so you can use a gravatar to change. Simply login on Gravatar site, then update your profile picture by email that you use as the primary email on your website. Or you can change it from the Customize >> Custom Avatar.
+
+* What is the size of the header image resolution?
+The header image resolution is 1920 pixels for width and 600 pixels for height.
+
 == Changelog ==
+0.7
+- Update with updated underscores base
+- add post thumbnail
+- remove SlickNav
 0.6.2
 - Fixing pingback url
 - Fixing escape url
@@ -98,3 +92,12 @@ Alternatively,
 - Remove Ads code. I'm forget to delete it on previous version.
 0.1
 - Initial release
+
+== Credits ==
+
+* Based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+* Gridiculo.us Grid System by c.bavota - http://gridiculo.us/ - Licensed under GPL v2.
+* Dashicons - https://developer.wordpress.org/resource/dashicons/ - Licensed under GPLv2
+* html5.js - https://github.com/aFarkas/html5shiv - Licensed under MIT/GPL2
+* Lato font used in the themes are designed by Łukasz Dziedzic, and published under the Open Font License - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL

@@ -1,138 +1,165 @@
 <?php
-
 /**
- * Custom template tags for this theme.
+ * Custom template tags for this theme
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package Mahal
  */
 
-if (!function_exists('mahal_paging_nav')) :
+if ( ! function_exists( 'mahal_posted_on' ) ) :
 	/**
-	 * Display navigation to next/previous set of posts when applicable.
-	 */
-	function mahal_paging_nav() {
-		// Don't print empty markup if there's only one page.
-		if ($GLOBALS['wp_query']->max_num_pages < 2) {
-			return;
-		}
-?>
-		<nav class="navigation paging-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e('Posts navigation', 'mahal'); ?></h1>
-			<div class="nav-links">
-
-				<?php if (get_next_posts_link()) : ?>
-					<div class="nav-previous"><?php next_posts_link(__('Older posts', 'mahal')); ?></div>
-				<?php endif; ?>
-
-				<?php if (get_previous_posts_link()) : ?>
-					<div class="nav-next"><?php previous_posts_link(__('Newer posts', 'mahal')); ?></div>
-				<?php endif; ?>
-
-			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
-	<?php
-	}
-endif;
-
-if (!function_exists('mahal_post_nav')) :
-	/**
-	 * Display navigation to next/previous post when applicable.
-	 */
-	function mahal_post_nav() {
-		// Don't print empty markup if there's nowhere to navigate.
-		$previous = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
-		$next     = get_adjacent_post(false, '', false);
-
-		if (!$next && !$previous) {
-			return;
-		}
-	?>
-		<nav class="navigation post-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e('Post navigation', 'mahal'); ?></h1>
-			<div class="nav-links">
-				<?php
-				previous_post_link('<div class="nav-previous">%link</div>', _x('<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'mahal'));
-				next_post_link('<div class="nav-next">%link</div>',     _x('%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'mahal'));
-				?>
-			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
-<?php
-	}
-endif;
-
-if (!function_exists('mahal_posted_on')) :
-	/**
-	 * Prints HTML with meta information for the current post-date/time and author.
+	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function mahal_posted_on() {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-		if (get_the_time('U') !== get_the_modified_time('U')) {
-			$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf(
 			$time_string,
-			esc_attr(get_the_date('c')),
-			esc_html(get_the_date()),
-			esc_attr(get_the_modified_date('c')),
-			esc_html(get_the_modified_date())
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() )
 		);
 
-		printf(
-			__('<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'mahal'),
+		$posted_on = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( 'Posted on %s', 'post date', 'mahal' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
+
+		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
+endif;
+
+if ( ! function_exists( 'mahal_posted_by' ) ) :
+	/**
+	 * Prints HTML with meta information for the current author.
+	 */
+	function mahal_posted_by() {
+		$byline = sprintf(
+			/* translators: %s: post author. */
+			esc_html_x( 'by %s', 'post author', 'mahal' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		);
+
+		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
+endif;
+
+if ( ! function_exists( 'mahal_entry_footer' ) ) :
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+	function mahal_entry_footer() {
+		// Hide category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( esc_html__( ', ', 'mahal' ) );
+			if ( $categories_list ) {
+				/* translators: 1: list of categories. */
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'mahal' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
+
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'mahal' ) );
+			if ( $tags_list ) {
+				/* translators: 1: list of tags. */
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'mahal' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
+		}
+
+		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '<span class="comments-link">';
+			comments_popup_link(
+				sprintf(
+					wp_kses(
+						/* translators: %s: post title */
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'mahal' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					wp_kses_post( get_the_title() )
+				)
+			);
+			echo '</span>';
+		}
+
+		edit_post_link(
 			sprintf(
-				'<a href="%1$s" rel="bookmark">%2$s</a>',
-				esc_url(get_permalink()),
-				$time_string
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'mahal' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				wp_kses_post( get_the_title() )
 			),
-			sprintf(
-				'<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
-				esc_url(get_author_posts_url(get_the_author_meta('ID'))),
-				esc_html(get_the_author())
-			)
+			'<span class="edit-link">',
+			'</span>'
 		);
 	}
 endif;
 
-/**
- * Returns true if a blog has more than 1 category.
- *
- * @return bool
- */
-function mahal_categorized_blog() {
-	if (false === ($all_the_cool_cats = get_transient('mahal_categories'))) {
-		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories(array(
-			'fields'     => 'ids',
-			'hide_empty' => 1,
+if ( ! function_exists( 'mahal_post_thumbnail' ) ) :
+	/**
+	 * Displays an optional post thumbnail.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	function mahal_post_thumbnail() {
+		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+			return;
+		}
 
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		));
+		if ( is_singular() ) :
+			?>
 
-		// Count the number of categories that are attached to the posts.
-		$all_the_cool_cats = count($all_the_cool_cats);
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div><!-- .post-thumbnail -->
 
-		set_transient('mahal_categories', $all_the_cool_cats);
+		<?php else : ?>
+
+			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+				<?php
+					the_post_thumbnail(
+						'post-thumbnail',
+						array(
+							'alt' => the_title_attribute(
+								array(
+									'echo' => false,
+								)
+							),
+						)
+					);
+				?>
+			</a>
+
+			<?php
+		endif; // End is_singular().
 	}
+endif;
 
-	if ($all_the_cool_cats > 1) {
-		// This blog has more than 1 category so mahal_categorized_blog should return true.
-		return true;
-	} else {
-		// This blog has only 1 category so mahal_categorized_blog should return false.
-		return false;
+if ( ! function_exists( 'wp_body_open' ) ) :
+	/**
+	 * Shim for sites older than 5.2.
+	 *
+	 * @link https://core.trac.wordpress.org/ticket/12563
+	 */
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
 	}
-}
-
-/**
- * Flush out the transients used in mahal_categorized_blog.
- */
-function mahal_category_transient_flusher() {
-	// Like, beat it. Dig?
-	delete_transient('mahal_categories');
-}
-add_action('edit_category', 'mahal_category_transient_flusher');
-add_action('save_post',     'mahal_category_transient_flusher');
+endif;
