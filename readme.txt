@@ -8,7 +8,7 @@ Tested up to: 5.4
 Requires PHP: 5.6
 Stable tag: 0.7
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: LICENSE.txt
 
 Mahal WordPress Theme, (C) 2014 Dhimas Kirana - https://www.dhimaskirana.com/
 

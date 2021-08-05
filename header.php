@@ -41,7 +41,7 @@
 							)); ?>
 						<?php else : ?>
 							<div class="main-navigation-not-set c12">
-								<p><?php printf(__('Please go to <a href="%1$s">menus</a> to set this area.', 'mahal'), esc_url(admin_url('nav-menus.php'))); ?></p>
+								<p><?php printf(esc_attr('Please go to <a href="%1$s">menus</a> to set this area.', 'mahal'), esc_url(admin_url('nav-menus.php'))); ?></p>
 							</div>
 						<?php endif; ?>
 					</div>

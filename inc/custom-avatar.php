@@ -8,9 +8,9 @@
 
 function mahal_custom_avatar($wp_customize) {
     $wp_customize->add_section('custom_avatar_section', array(
-        'title'       => __('Custom Avatar', 'mahal'),
+        'title'       => esc_html_e('Custom Avatar', 'mahal'),
         'priority'    => 30,
-        'description' => __('Upload your image to replace the avatar in the header', 'mahal'),
+        'description' => esc_html_e('Upload your image to replace the avatar in the header', 'mahal'),
     ));
 
     $wp_customize->add_setting('custom_avatar', array(
@@ -18,7 +18,7 @@ function mahal_custom_avatar($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_avatar', array(
-        'label'    => __('Upload Your Avatar', 'mahal'),
+        'label'    => esc_html_e('Upload Your Avatar', 'mahal'),
         'section'  => 'custom_avatar_section',
         'settings' => 'custom_avatar',
     )));
