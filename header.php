@@ -41,7 +41,14 @@
 							)); ?>
 						<?php else : ?>
 							<div class="main-navigation-not-set c12">
-								<p><?php printf(esc_attr('Please go to <a href="%1$s">menus</a> to set this area.', 'mahal'), esc_url(admin_url('nav-menus.php'))); ?></p>
+								<p><?php printf(
+										wp_kses(
+											/* translators: %s: Name of current post. Only visible to screen readers */
+											__('Please go to <a href="%1$s">menus</a> to set this area.', 'mahal'),
+											array('a' => array('href' => array()))
+										),
+										esc_url(admin_url('nav-menus.php'))
+									); ?></p>
 							</div>
 						<?php endif; ?>
 					</div>

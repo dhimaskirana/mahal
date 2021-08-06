@@ -17,16 +17,11 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
-		<a href="<?php echo esc_url(__('https://wordpress.org/', 'mahal')); ?>">
-			<?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf(esc_html__('Proudly powered by %s', 'mahal'), 'WordPress');
-			?>
-		</a>
+		<a href="<?php echo esc_url(__('https://wordpress.org/', 'mahal')); ?>">WordPress</a>
 		<span class="sep"> | </span>
 		<?php
 		/* translators: 1: Theme name, 2: Theme author. */
-		printf(esc_html__('Theme: %1$s by %2$s.', 'mahal'), 'mahal', '<a href="https://www.dhimaskirana.com/">Dhimas Kirana</a>');
+		printf(esc_html__('%1$s design by %2$s.', 'mahal'), 'Mahal Themes', '<a href="https://www.dhimaskirana.com/">Dhimas Kirana</a>');
 		?>
 	</div><!-- .site-info -->
 	<div class="backtotop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });return false;"><span id="top" class="dashicons dashicons-arrow-up-alt2"></span></div>

@@ -37,7 +37,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__('Edit <span class="screen-reader-text">%s</span><span class="dashicons dashicons-edit"></span>', 'mahal'),
+						__('Edit <span class="screen-reader-text">%s</span>', 'mahal'),
 						array(
 							'span' => array(
 								'class' => array(),

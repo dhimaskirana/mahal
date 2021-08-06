@@ -28,3 +28,6 @@ The avatar default use gravatar, so you can use a gravatar to change. Simply log
 
 ###  What is the size of the header image resolution?
 The header image resolution is 1920 pixels for width and 600 pixels for height.
+
+###  What is the size of the featured image post resolution?
+The featured image post resolution is 920 pixels for width and 300 pixels for height.

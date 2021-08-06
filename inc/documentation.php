@@ -34,17 +34,54 @@ function mahal_documentation() {
             <?php if ($active_tab == 'about') { ?>
 
                 <div class="section">
-                    <p><?php printf(esc_attr('Mahal is made based on <a href="%1$s" target="_blank">_s</a> (Underscores) theme by Automattic. Mahal is free WordPress Themes. One column and fully responsive. Comes with randomized header background.', 'mahal'), 'https://github.com/Automattic/_s'); ?></p>
+                    <p><?php printf(
+                            wp_kses(
+                                /* translators: %1$s: underscores themes links */
+                                __('Mahal is made based on <a href="%1$s" target="_blank">_s</a> (Underscores) theme by Automattic. Mahal is free WordPress Themes. One column and fully responsive. Comes with randomized header background.', 'mahal'),
+                                array(
+                                    'a' => array(
+                                        'href' => array(),
+                                        'target' => array()
+                                    )
+                                )
+                            ),
+                            esc_url('https://github.com/Automattic/_s')
+                        ); ?></p>
                     <p><?php esc_html_e('Simple and responsive WordPress theme. It\'s clean and good for you who wants focused on the content. It supports 2 widget areas on the footer.', 'mahal'); ?></p>
-                    <p><?php printf(esc_attr('Please read <a href="%1$s" target="_blank"><strong>readme.txt</strong> file</a> to know about theme component. You can visit <a href="%2$s" target="_blank">theme page</a> on my website.', 'mahal'), esc_url(home_url('wp-content/themes/mahal/readme.txt')), 'https://blog.dhimaskirana.com/mahal-wordpress-themes'); ?></p>
-                    <p><?php printf(esc_attr('If you like this theme, please <a href="%1$s" target="_blank">give a 5 stars review</a> in the WordPress Themes directory. Any ideas to add features to this theme? Feel free to <a href="%2$s" target="_blank">contact me</a>.', 'mahal'), 'https://wordpress.org/support/theme/mahal/reviews/', 'mailto:me@dhimaskirana.com?subject=About%20Mahal%20Theme&body=Hi%20Dhimas...'); ?></p>
+                    <p><?php printf(
+                            wp_kses(
+                                /* translators: %1$s: readme.txt files links */
+                                __('Please read <a href="%1$s" target="_blank"><strong>readme.txt</strong> file</a> to know about theme component.', 'mahal'),
+                                array(
+                                    'a' => array(
+                                        'href' => array(),
+                                        'target' => array()
+                                    )
+                                )
+                            ),
+                            esc_url(get_template_directory_uri() . '/readme.txt')
+                        ); ?></p>
+                    <p><?php printf(
+                            wp_kses(
+                                /* translators: %1$s: Mahal Themes Reviews Links %2$s: mailto links */
+                                __('If you like this theme, please <a href="%1$s" target="_blank">give a 5 stars review</a> in the WordPress Themes directory. Any ideas to add features to this theme? Feel free to <a href="%2$s" target="_blank">contact me</a>.', 'mahal'),
+                                array(
+                                    'a' => array(
+                                        'href' => array(),
+                                        'target' => array()
+                                    )
+                                )
+                            ),
+                            esc_url('https://wordpress.org/support/theme/mahal/reviews/'),
+                            'mailto:me@dhimaskirana.com?subject=About%20Mahal%20Theme&body=Hi%20Dhimas...'
+                        ); ?></p>
                 </div>
 
             <?php } elseif ($active_tab == 'features') { ?>
 
                 <div class="section">
                     <h3 class="heading"><?php esc_html_e('Back to Top', 'mahal'); ?></h3>
-                    <p><?php esc_html_e('This theme has a feature to scroll to the top of the page. This feature called <strong>back to top</strong>. Simply use, without the need for configuration.', 'mahal'); ?></p>
+                    <p><?php echo wp_kses(__('This theme has a feature to scroll to the top of the page. This feature called <strong>back to top</strong>. Simply use, without the need for configuration.', 'mahal'), array('strong' => array())); ?></p>
                 </div>
 
                 <div class="section">
@@ -54,21 +91,31 @@ function mahal_documentation() {
 
                 <div class="section">
                     <h3 class="heading"><?php esc_html_e('Avatar', 'mahal'); ?></h3>
-                    <p><?php esc_html_e('This theme is unique. This theme has an avatar based your primary email on your website general settings. How to change it? You can check at <strong>Frequently Asked Questions</strong> tab.', 'mahal'); ?></p>
-                </div>
-
-                <div class="section">
-                    <h3 class="heading"><?php esc_html_e('Social Media Links', 'mahal'); ?></h3>
-                    <p><?php esc_html_e('You can add your social media links to this feature through Custom Menus. You can check how to use it at <strong>Frequently Asked Questions</strong> tab.', 'mahal'); ?></p>
+                    <p><?php echo wp_kses(__('This theme is unique. This theme has an avatar based your primary email on your website general settings. How to change it? You can check at <strong>Frequently Asked Questions</strong> tab.', 'mahal'), array('strong' => array())); ?></p>
                 </div>
 
             <?php } elseif ($active_tab == 'faq') { ?>
 
                 <div class="section">
                     <h3 class="heading"><?php esc_html_e('How to change the avatar?', 'mahal'); ?></h3>
-                    <p><?php printf(esc_attr('The avatar default use gravatar, so you can use a gravatar to change. Simply login on <a href="%1$s" target="_blank">Gravatar</a> site, then update your profile picture by email that you use as the primary email on your website. Or you can change it from the <strong>Customize >> Custom Avatar</strong>.', 'mahal'), 'https://gravatar.com/'); ?></p>
+                    <p><?php printf(
+                            wp_kses(
+                                /* translators: %1$s: Gravatar URL */
+                                __('The avatar default use gravatar, so you can use a gravatar to change. Simply login on <a href="%1$s" target="_blank">Gravatar</a> site, then update your profile picture by email that you use as the primary email on your website. Or you can change it from the <strong>Customize >> Custom Avatar</strong>.', 'mahal'),
+                                array(
+                                    'a' => array(
+                                        'href' => array()
+                                    ),
+                                    'strong' => array()
+                                )
+                            ),
+                            esc_url('https://gravatar.com/')
+                        ); ?></p>
                     <h3 class="heading"><?php esc_html_e('What is the size of the header image resolution?', 'mahal'); ?></h3>
-                    <p><?php printf(esc_attr('The header image resolution is <strong>1920 pixels</strong> for width and <strong>600 pixels</strong> for height.', 'mahal')); ?></p>
+                    <p><?php echo wp_kses(__('The header image resolution is <strong>1920 pixels</strong> for width and <strong>600 pixels</strong> for height.', 'mahal'), array('strong' => array())); ?></p>
+                    <p><?php esc_attr('The header image resolution is <strong>1920 pixels</strong> for width and <strong>600 pixels</strong> for height.', 'mahal'); ?></p>
+                    <h3 class="heading"><?php esc_html_e('What is the size of the featured image post resolution?', 'mahal'); ?></h3>
+                    <p><?php echo wp_kses(__('The featured image post resolution is <strong>920 pixels</strong> for width and <strong>300 pixels</strong> for height.', 'mahal'), array('strong' => array())); ?></p>
                 </div>
 
             <?php } ?>

@@ -44,7 +44,7 @@ get_header();
 
 				endwhile;
 
-				the_posts_navigation();
+				mahal_numeric_pagination();
 
 			else :
 

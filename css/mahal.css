@@ -279,7 +279,6 @@ img {
 	/* Make sure images are scaled correctly. */
 	max-width: 100%;
 	/* Adhere to container width. */
-	border-radius: 3px;
 }
 
 figure {
@@ -295,22 +294,20 @@ th {
 	font-weight: bold;
 }
 
-.mahalbreadcrumbs {
+.mahal_breadcrumbs {
 	padding: .5em;
 	margin: .5em 0;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
 	text-align: center;
 	color: #aaa;
 }
 
-.mahalbreadcrumbs a {
+.mahal_breadcrumbs a {
 	text-decoration: none;
 	color: #aaa;
 	position: relative;
 }
 
-.mahalbreadcrumbs .dashicons {
+.mahal_breadcrumbs .dashicons {
 	font-size: 1.4em;
 }
 
@@ -544,6 +541,10 @@ a:hover, a:focus, a:active {
 
 /* Small menu. */
 
+.menu-toggle, .main-navigation.toggled ul {
+	display: block;
+}
+
 .menu-toggle {
 	display: block;
 	float: right;
@@ -618,39 +619,35 @@ a:hover, a:focus, a:active {
 	}
 }
 
-.site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
-	margin: 0 0 1em;
-	overflow: hidden;
+.navigation {
+	margin-bottom: 2em;
 }
 
-.comment-navigation .nav-previous, .paging-navigation .nav-previous, .post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+.navigation ul {
+	margin: 0 auto;
+	text-align: center;
 }
 
-.comment-navigation .nav-next, .paging-navigation .nav-next, .post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
-.nav-previous a, .nav-next a {
-	color: #4D4D4D;
-	text-decoration: none;
-	display: inline-block;
-	padding: 1em;
-	background: #fff;
-	border-radius: 3px;
-	border: 1px solid #eee;
-	transition: all 0.3s;
-	-o-transition: all 0.3s -moz-transition:all 0.3s;
-	-webkit-transition: all 0.3s;
-}
-
-.nav-previous a:hover, .nav-next a:hover {
-	background: #4D4D4D;
+.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled {
 	color: #fff;
-	border: 1px solid #ddd;
+	text-decoration: none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled {
+	background-color: #f2f2f2;
+	color: #4D4D4D;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: .5em 1em;
+}
+
+.navigation li a:hover, .navigation li.active a {
+	color: #ffffff;
+	background-color: #4D4D4D;
 }
 
 /*--------------------------------------------------------------
@@ -729,13 +726,6 @@ a:hover, a:focus, a:active {
 	background-color: #fff;
 	border-radius: 3px;
 	border: 1px solid #eee;
-}
-
-.widget-title {
-	text-align: center;
-	padding-bottom: .3em;
-	margin-bottom: .3em;
-	border-bottom: solid 1px #eee;
 }
 
 /* Make sure select elements fit in widgets */
@@ -874,7 +864,6 @@ a:hover, a:focus, a:active {
 	background-color: #fff;
 	border: 1px solid #eee;
 	border-radius: 3px;
-	padding: 3em 1em 1em;
 	position: relative;
 	margin: 5em 0;
 	-ms-word-wrap: break-word;
@@ -911,10 +900,10 @@ a:hover, a:focus, a:active {
 	border-radius: 50%;
 }
 
-.sticky {
-	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+.sticky, .hentry:hover {
+	-webkit-box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+	-moz-box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+	box-shadow: 0 0 10px rgb(0 0 0 / 5%);
 }
 
 .sticky:before {
@@ -968,10 +957,18 @@ a:hover, a:focus, a:active {
 	content: '\f105';
 }
 
+.page .entry-header, .has-post-thumbnail .entry-header {
+	margin-top: 0;
+}
+
+.has-post-thumbnail .wp-post-image {
+	width: 100%;
+}
+
 .entry-header {
 	text-align: center;
-	padding-bottom: 1em;
-	border-bottom: dotted #ddd 1px;
+	padding: 1em;
+	margin-top: 2em;
 }
 
 .entry-title {
@@ -1031,39 +1028,13 @@ blockquote p {
 
 .entry-footer {
 	text-align: center;
-	padding-top: 1em;
-	border-top: dotted #ddd 1px;
-	color: #aaa;
+	padding: 1em;
+	color: #bbb;
 }
 
 .entry-footer a {
 	text-decoration: none;
-	color: #fff;
-	background-color: #22313F;
-	padding: .5em;
-}
-
-.entry-footer a:hover {
-	color: #fff;
-	background-color: #e74c3c;
-}
-
-.entry-footer .cat-links {
-	padding-right: .1em;
-}
-
-.entry-footer .tags-links, .entry-footer .comments-link, .entry-footer .edit-link {
-	padding-left: .2em;
-}
-
-.entry-footer .dashicons {
-	font-size: 1.5em;
-	margin-right: .2em;
-	color: #fff;
-}
-
-.byline, .updated {
-	display: none;
+	color: #bbb;
 }
 
 .single .byline, .group-blog .byline {
@@ -1072,6 +1043,7 @@ blockquote p {
 
 .page-content, .entry-content, .entry-summary {
 	margin: 1.5em 0 0;
+	padding: 0 1em;
 }
 
 .entry-content li {
@@ -1201,7 +1173,7 @@ blockquote p {
 }
 
 .comment-metadata {
-	padding-left: 80px;
+	padding-left: 50px;
 	font-size: .8em;
 }
 

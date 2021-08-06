@@ -8,26 +8,6 @@
  * @package Mahal
  */
 
-//Mahal Breadcrumbs
-if (!function_exists('mahalbreadcrumbs')) :
-	function mahalbreadcrumbs() {
-		global $post;
-		$separator = ' &rang; ';
-		$blog_url = home_url();
-		$post_title = get_the_title($post->post_parent);
-		echo '<div xmlns:v="http://rdf.data-vocabulary.org/#" class="mahalbreadcrumbs">';
-		echo '<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="' . esc_url($blog_url) . '" rel="nofollow">' . esc_html_e('Home', 'mahal') . '</a></span> ';
-		$category = get_the_category();
-		if ($category) {
-			foreach ($category as $category) {
-				echo $separator . '<span typeof="v:Breadcrumb"><a href="' . esc_url(get_category_link($category->term_id)) . '" rel="v:url" property="v:title">' . $category->name . '</a></span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-		}
-		echo $separator . '<span typeof="v:Breadcrumb"><span property="v:title">' . $post_title . '</span></span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo '</div>';
-	}
-endif;
-
 if (!defined('MAHAL_VERSION')) {
 	// Replace the version number of the theme on each release.
 	define('MAHAL_VERSION', '0.7');
@@ -67,7 +47,8 @@ if (!function_exists('mahal_setup')) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support('post-thumbnails');
-		set_post_thumbnail_size(900, 200, true);
+
+		add_image_size('mahal-featured-image', 920, 300, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
