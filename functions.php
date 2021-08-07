@@ -145,7 +145,7 @@ add_action('widgets_init', 'mahal_widgets_init');
  * Enqueue scripts and styles.
  */
 function mahal_scripts() {
-	wp_enqueue_style('mahal-themes', get_stylesheet_uri(), array(), MAHAL_VERSION);
+	// wp_enqueue_style('mahal-themes', get_stylesheet_uri(), array(), MAHAL_VERSION);
 	wp_enqueue_style('mahal-style', get_template_directory_uri() . '/css/mahal.css', array('dashicons'));
 	wp_enqueue_style('lato-font', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 

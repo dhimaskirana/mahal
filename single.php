@@ -23,8 +23,8 @@ get_header();
 
 				the_post_navigation(
 					array(
-						'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'mahal') . '</span> <span class="nav-title">%title</span>',
-						'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'mahal') . '</span> <span class="nav-title">%title</span>',
+						'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous Post:', 'mahal') . '</span><br><span class="nav-title">%title</span>',
+						'next_text' => '<span class="nav-subtitle">' . esc_html__('Next Post:', 'mahal') . '</span><br><span class="nav-title">%title</span>',
 					)
 				);
 
