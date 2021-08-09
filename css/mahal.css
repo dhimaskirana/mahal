@@ -73,7 +73,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #f9f9f9;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -760,8 +760,8 @@ a:hover, a:focus, a:active {
 
 .widget {
 	margin: 0 0 1.5em;
-	padding: 1em;
 	background-color: #fff;
+	padding: 1em;
 	border-radius: 3px;
 	border: 1px solid #eee;
 }
@@ -1151,8 +1151,10 @@ blockquote p {
 
 .comments-area {
 	background: #fff;
-	border-radius: 3px;
 	margin-bottom: 1em;
+	padding: 1em;
+	border-radius: 3px;
+	border: 1px solid #eee;
 }
 
 .comments-title {

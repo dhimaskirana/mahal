@@ -18,7 +18,7 @@ if (!function_exists('mahal_breadcrumbs')) :
 		$separator = ' &#47; ';
 		$post_title = get_the_title($post->post_parent);
 		echo '<div xmlns:v="http://rdf.data-vocabulary.org/#" class="mahal_breadcrumbs">';
-		echo '<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="' . esc_url(site_url()) . '" rel="nofollow">' . esc_html__('Home', 'mahal') . '</a></span> ';
+		echo '<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="' . esc_url(home_url()) . '" rel="nofollow">' . esc_html__('Home', 'mahal') . '</a></span> ';
 		$category = get_the_category();
 		if ($category) {
 			foreach ($category as $category) {
@@ -36,9 +36,6 @@ if (!function_exists('mahal_posted_on')) :
 	 */
 	function mahal_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if (get_the_time('U') !== get_the_modified_time('U')) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
 
 		$time_string = sprintf(
 			$time_string,

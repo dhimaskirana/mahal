@@ -1,7 +1,7 @@
 === Mahal ===
 
 Contributors: dhmskrn
-Tags: one-column, custom-background, custom-logo, custom-menu, threaded-comments, featured-images, translation-ready
+Tags: blog, one-column, custom-header, custom-menu, custom-logo, custom-background, featured-images, footer-widgets, post-formats, sticky-post, threaded-comments, translation-ready
 Donate link: https://paypal.me/dhimaskirana
 Requires at least: 4.5
 Tested up to: 5.4
@@ -53,11 +53,13 @@ The header image resolution is 1920 pixels for width and 600 pixels for height.
 The featured image post resolution is 920 pixels for width and 300 pixels for height.
 
 == Changelog ==
+0.7.1
+- Minor improvements
 0.7
 - Update with updated underscores base
-- add post thumbnail
-- remove SlickNav
-- update post navigation
+- Add post thumbnail
+- Remove SlickNav
+- Update post navigation
 0.6.2
 - Fixing pingback url
 - Fixing escape url

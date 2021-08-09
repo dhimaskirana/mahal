@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-08-05 07:56+0700\n"
+"POT-Creation-Date: 2021-08-10 06:02+0700\n"
 "PO-Revision-Date: 2021-08-05 07:58+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -43,33 +44,24 @@ msgstr ""
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:23
+#: footer.php:24
 #, php-format
-msgid "Proudly powered by %s"
+msgid "%1$s designed by %2$s."
 msgstr ""
 
-#: footer.php:29
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: functions.php:19
-msgid "Home"
-msgstr ""
-
-#: functions.php:74
+#: functions.php:56
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:123
 msgid "Footer 1 Sidebar"
 msgstr ""
 
-#: functions.php:141 functions.php:152
+#: functions.php:125 functions.php:136
 msgid "Appears as the Footer Sidebar."
 msgstr ""
 
-#: functions.php:150
+#: functions.php:134
 msgid "Footer 2 Sidebar"
 msgstr ""
 
@@ -77,7 +69,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:44
+#: header.php:47
 #, php-format
 msgid "Please go to <a href=\"%1$s\">menus</a> to set this area."
 msgstr ""
@@ -132,7 +124,7 @@ msgstr ""
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: inc/documentation.php:37
+#: inc/documentation.php:40
 #, php-format
 msgid ""
 "Mahal is made based on <a href=\"%1$s\" target=\"_blank\">_s</a> "
@@ -140,21 +132,20 @@ msgid ""
 "column and fully responsive. Comes with randomized header background."
 msgstr ""
 
-#: inc/documentation.php:38
+#: inc/documentation.php:50
 msgid ""
 "Simple and responsive WordPress theme. It's clean and good for you who wants "
 "focused on the content. It supports 2 widget areas on the footer."
 msgstr ""
 
-#: inc/documentation.php:39
+#: inc/documentation.php:54
 #, php-format
 msgid ""
 "Please read <a href=\"%1$s\" target=\"_blank\"><strong>readme.txt</strong> "
-"file</a> to know about theme component. You can visit <a href=\"%2$s\" "
-"target=\"_blank\">theme page</a> on my website."
+"file</a> to know about theme component."
 msgstr ""
 
-#: inc/documentation.php:40
+#: inc/documentation.php:67
 #, php-format
 msgid ""
 "If you like this theme, please <a href=\"%1$s\" target=\"_blank\">give a 5 "
@@ -163,55 +154,44 @@ msgid ""
 "\">contact me</a>."
 msgstr ""
 
-#: inc/documentation.php:46
+#: inc/documentation.php:83
 msgid "Back to Top"
 msgstr ""
 
-#: inc/documentation.php:47
+#: inc/documentation.php:84
 msgid ""
 "This theme has a feature to scroll to the top of the page. This feature "
 "called <strong>back to top</strong>. Simply use, without the need for "
 "configuration."
 msgstr ""
 
-#: inc/documentation.php:51
+#: inc/documentation.php:88
 msgid "RDFa Breadcrumb Navigation"
 msgstr ""
 
-#: inc/documentation.php:52
+#: inc/documentation.php:89
 msgid ""
 "RDFa Breadcrumb provide links back to each previous page the user navigated "
 "through to get to the current page or - in hierarchical site structures - "
 "the parent pages of the current one. This theme has supported it."
 msgstr ""
 
-#: inc/documentation.php:56
+#: inc/documentation.php:93
 msgid "Avatar"
 msgstr ""
 
-#: inc/documentation.php:57
+#: inc/documentation.php:94
 msgid ""
 "This theme is unique. This theme has an avatar based your primary email on "
 "your website general settings. How to change it? You can check at "
 "<strong>Frequently Asked Questions</strong> tab."
 msgstr ""
 
-#: inc/documentation.php:61
-msgid "Social Media Links"
-msgstr ""
-
-#: inc/documentation.php:62
-msgid ""
-"You can add your social media links to this feature through Custom Menus. "
-"You can check how to use it at <strong>Frequently Asked Questions</strong> "
-"tab."
-msgstr ""
-
-#: inc/documentation.php:68
+#: inc/documentation.php:100
 msgid "How to change the avatar?"
 msgstr ""
 
-#: inc/documentation.php:69
+#: inc/documentation.php:104
 #, php-format
 msgid ""
 "The avatar default use gravatar, so you can use a gravatar to change. Simply "
@@ -221,38 +201,51 @@ msgid ""
 "strong>."
 msgstr ""
 
-#: inc/documentation.php:70
+#: inc/documentation.php:114
 msgid "What is the size of the header image resolution?"
 msgstr ""
 
-#: inc/documentation.php:71
+#: inc/documentation.php:115
 msgid ""
 "The header image resolution is <strong>1920 pixels</strong> for width and "
 "<strong>600 pixels</strong> for height."
 msgstr ""
 
-#: inc/template-tags.php:63
+#: inc/documentation.php:117
+msgid "What is the size of the featured image post resolution?"
+msgstr ""
+
+#: inc/documentation.php:118
+msgid ""
+"The featured image post resolution is <strong>920 pixels</strong> for width "
+"and <strong>300 pixels</strong> for height."
+msgstr ""
+
+#: inc/template-tags.php:21
+msgid "Home"
+msgstr ""
+
+#: inc/template-tags.php:82
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/template-tags.php:86 inc/template-tags.php:105
 #, php-format
-msgid "Posted in %1$s"
+msgid "%1$s"
 msgstr ""
 
-#: inc/template-tags.php:73
-#, php-format
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc/template-tags.php:83
+#: inc/template-tags.php:126
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:100
+#: inc/template-tags.php:143 template-parts/content-page.php:40
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/template-tags.php:240
+msgid "Posts navigation"
 msgstr ""
 
 #: search.php:23
@@ -261,11 +254,11 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #: single.php:26
-msgid "Previous:"
+msgid "Previous Post:"
 msgstr ""
 
 #: single.php:27
-msgid "Next:"
+msgid "Next Post:"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -290,15 +283,8 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:26 template-parts/content.php:55
+#: template-parts/content-page.php:26 template-parts/content.php:58
 msgid "Pages:"
-msgstr ""
-
-#: template-parts/content-page.php:40
-#, php-format
-msgid ""
-"Edit <span class=\"screen-reader-text\">%s</span><span class=\"dashicons "
-"dashicons-edit\"></span>"
 msgstr ""
 
 #: template-parts/content.php:42

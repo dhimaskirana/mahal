@@ -64,36 +64,38 @@ if (!function_exists('mahal_setup')) :
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support(
-			'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-				'style',
-				'script',
-			)
-		);
+		add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script'));
 
 		// Custom Header
 		add_theme_support('custom-header');
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'mahal_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
+		add_theme_support('custom-background', apply_filters(
+			'mahal_custom_background_args',
+			array(
+				'default-color' => 'f9f9f9',
+				'default-image' => '',
 			)
-		);
+		));
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support('custom-logo', array('height' => 250, 'width' => 250, 'flex-width' => true, 'flex-height' => true));
+
+		// Default block styles
+		add_theme_support('wp-block-styles');
+
+		// Wide Alignment
+		add_theme_support('align-wide');
+
+		// Responsive Embeds
+		add_theme_support('responsive-embeds');
 	}
 endif;
 add_action('after_setup_theme', 'mahal_setup');
