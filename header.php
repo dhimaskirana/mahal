@@ -27,7 +27,7 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'mahal'); ?></a>
 
-		<header id="masthead" class="site-header" <?php if (get_header_image()) : ?> style="background:url(<?php header_image(); ?>) fixed;" <?php endif; ?>>
+		<header id="masthead" class="site-header" <?php if (get_header_image()) : ?> style="background:url(<?php header_image(); ?>);background-size:cover;" <?php endif; ?>>
 			<nav id="site-navigation" class="main-navigation">
 				<div class="grid w960">
 					<div class="row">

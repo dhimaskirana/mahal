@@ -53,6 +53,8 @@ The header image resolution is 1920 pixels for width and 600 pixels for height.
 The featured image post resolution is 920 pixels for width and 300 pixels for height.
 
 == Changelog ==
+0.7.2
+- Update header image and license of image
 0.7.1
 - Minor improvements
 0.7
@@ -107,3 +109,18 @@ The featured image post resolution is 920 pixels for width and 300 pixels for he
 * Dashicons - https://developer.wordpress.org/resource/dashicons/ - Licensed under GPLv2
 * html5.js - https://github.com/aFarkas/html5shiv - Licensed under MIT/GPL2
 * Lato font used in the themes are designed by Łukasz Dziedzic, and published under the Open Font License - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+
+== Photo Credits ==
+
+All photos licensed under Unsplash License - https://unsplash.com/license
+
+Tanah Lot - Photo by Harry Kessell - https://unsplash.com/@harrykessell
+Borobudur - Photo by Mario La Pergola - https://unsplash.com/@mlapergolaphoto
+Bromo - Photo by Kevin Zhang - https://unsplash.com/@shukaiz
+Padar Island - Photo by Rashel Ochoa - https://unsplash.com/@rashel8a
+Tugu Jogja - Photo by Angga Kurniawan - https://unsplash.com/@anggakrnwan
+SydneyBlur - Photo by Lubo Minar - https://unsplash.com/@bubo
+Los Angeles by Night - Photo by Henning Witzel - https://unsplash.com/@henning
+Shooting Star Rye - Photo by Kristopher Roller - https://unsplash.com/@krisroller
+Earth - Photo by NASA - https://unsplash.com/@nasa
+Tatra Mountains - Photo by Michał Parzuchowski - https://unsplash.com/@mparzuchowski
