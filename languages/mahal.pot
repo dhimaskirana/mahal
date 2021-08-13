@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-08-10 06:02+0700\n"
+"POT-Creation-Date: 2021-08-13 13:18+0700\n"
 "PO-Revision-Date: 2021-08-05 07:58+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -151,47 +151,48 @@ msgid ""
 "If you like this theme, please <a href=\"%1$s\" target=\"_blank\">give a 5 "
 "stars review</a> in the WordPress Themes directory. Any ideas to add "
 "features to this theme? Feel free to <a href=\"%2$s\" target=\"_blank"
-"\">contact me</a>."
-msgstr ""
-
-#: inc/documentation.php:83
-msgid "Back to Top"
+"\">contact me</a> or visit Mahal Themes on <a href=\"%3$s\" target=\"_blank"
+"\">github</a>."
 msgstr ""
 
 #: inc/documentation.php:84
+msgid "Back to Top"
+msgstr ""
+
+#: inc/documentation.php:85
 msgid ""
 "This theme has a feature to scroll to the top of the page. This feature "
 "called <strong>back to top</strong>. Simply use, without the need for "
 "configuration."
 msgstr ""
 
-#: inc/documentation.php:88
+#: inc/documentation.php:89
 msgid "RDFa Breadcrumb Navigation"
 msgstr ""
 
-#: inc/documentation.php:89
+#: inc/documentation.php:90
 msgid ""
 "RDFa Breadcrumb provide links back to each previous page the user navigated "
 "through to get to the current page or - in hierarchical site structures - "
 "the parent pages of the current one. This theme has supported it."
 msgstr ""
 
-#: inc/documentation.php:93
+#: inc/documentation.php:94
 msgid "Avatar"
 msgstr ""
 
-#: inc/documentation.php:94
+#: inc/documentation.php:95
 msgid ""
 "This theme is unique. This theme has an avatar based your primary email on "
 "your website general settings. How to change it? You can check at "
 "<strong>Frequently Asked Questions</strong> tab."
 msgstr ""
 
-#: inc/documentation.php:100
+#: inc/documentation.php:101
 msgid "How to change the avatar?"
 msgstr ""
 
-#: inc/documentation.php:104
+#: inc/documentation.php:105
 #, php-format
 msgid ""
 "The avatar default use gravatar, so you can use a gravatar to change. Simply "
@@ -201,21 +202,21 @@ msgid ""
 "strong>."
 msgstr ""
 
-#: inc/documentation.php:114
+#: inc/documentation.php:115
 msgid "What is the size of the header image resolution?"
 msgstr ""
 
-#: inc/documentation.php:115
+#: inc/documentation.php:116
 msgid ""
 "The header image resolution is <strong>1920 pixels</strong> for width and "
 "<strong>600 pixels</strong> for height."
 msgstr ""
 
-#: inc/documentation.php:117
+#: inc/documentation.php:118
 msgid "What is the size of the featured image post resolution?"
 msgstr ""
 
-#: inc/documentation.php:118
+#: inc/documentation.php:119
 msgid ""
 "The featured image post resolution is <strong>920 pixels</strong> for width "
 "and <strong>300 pixels</strong> for height."

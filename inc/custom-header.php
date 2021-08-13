@@ -36,55 +36,30 @@ function mahal_custom_header_setup() {
 		)
 	);
 	register_default_headers(array(
-		'tanah-lot' => array(
-			'url'           => '%s/images/Tanah-Lot.jpg',
-			'thumbnail_url' => '%s/images/Tanah-Lot.jpg',
-			'description'   => 'Tanah Lot is a rock formation off the Indonesian island of Bali. It is home to the ancient Hindu pilgrimage temple Pura Tanah Lot, a popular tourist and cultural icon for photography.'
+		'stars-night' => array(
+			'url'           => '%s/images/Stars-Night.jpg',
+			'thumbnail_url' => '%s/images/Stars-Night.jpg',
+			'description'   => 'Stars Night'
 		),
-		'borobudur' => array(
-			'url'           => '%s/images/Borobudur.jpg',
-			'thumbnail_url' => '%s/images/Borobudur.jpg',
-			'description'   => 'Borobudur is the biggest Buddhist monument, an ancient site widely considered to be one of the world\'s seven wonders.'
+		'mountains' => array(
+			'url'           => '%s/images/Mountains.jpg',
+			'thumbnail_url' => '%s/images/Mountains.jpg',
+			'description'   => 'Mountains'
 		),
-		'bromo' => array(
-			'url'           => '%s/images/Bromo.jpg',
-			'thumbnail_url' => '%s/images/Bromo.jpg',
-			'description'   => 'Mount Bromo is an active somma volcano and part of the Tengger mountains, in East Java, Indonesia. The area is one of the most visited tourist destinations in East Java.'
+		'sky-clouds' => array(
+			'url'           => '%s/images/Sky-Clouds.jpg',
+			'thumbnail_url' => '%s/images/Sky-Clouds.jpg',
+			'description'   => 'Sky Clouds'
 		),
-		'padar-island' => array(
-			'url'           => '%s/images/Padar-Island.jpg',
-			'thumbnail_url' => '%s/images/Padar-Island.jpg',
-			'description'   => 'Padar is a small island located between Komodo and Rinca islands within Komodo archipelago, administrated under the West Manggarai Regency, East Nusa Tenggara, Indonesia.'
+		'enchanting-forest' => array(
+			'url'           => '%s/images/Enchanting-Forest.jpg',
+			'thumbnail_url' => '%s/images/Enchanting-Forest.jpg',
+			'description'   => 'Enchanting Forest'
 		),
-		'tugu-jogja' => array(
-			'url'           => '%s/images/Tugu-Jogja.jpg',
-			'thumbnail_url' => '%s/images/Tugu-Jogja.jpg',
-			'description'   => 'Tugu Jogja is an important historical landmark in the city of Yogyakarta, Indonesia. Because of its historical background, Tugu Yogyakarta has become a historical icon of the city.'
-		),
-		'sydneyblur' => array(
-			'url'           => '%s/images/SydneyBlur.jpg',
-			'thumbnail_url' => '%s/images/SydneyBlur.jpg',
-			'description'   => 'Sydney, capital of New South Wales and one of Australia\'s largest cities, is best known for its harbourfront Sydney Opera House.'
-		),
-		'los-angeles' => array(
-			'url'           => '%s/images/Los-Angeles-by-Night.jpg',
-			'thumbnail_url' => '%s/images/Los-Angeles-by-Night.jpg',
-			'description'   => 'Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry.'
-		),
-		'milky-way' => array(
-			'url'           => '%s/images/Shooting-Star-Rye.jpg',
-			'thumbnail_url' => '%s/images/Shooting-Star-Rye.jpg',
-			'description'   => 'The Milky Way is the galaxy that includes our Solar System, with the name describing the galaxy\'s appearance from Earth: a hazy band of light seen in the night sky formed from stars that cannot be individually distinguished by the naked eye.'
-		),
-		'earth' => array(
-			'url'           => '%s/images/Earth.jpg',
-			'thumbnail_url' => '%s/images/Earth.jpg',
-			'description'   => 'Earth is the third planet from the Sun and the only astronomical object known to harbor and support life.'
-		),
-		'tatra' => array(
-			'url'           => '%s/images/Tatra-Mountains.jpg',
-			'thumbnail_url' => '%s/images/Tatra-Mountains.jpg',
-			'description'   => 'The Tatra Mountains, part of the Carpathian mountain chain in eastern Europe, create a natural border between Slovakia and Poland.'
+		'rural-road' => array(
+			'url'           => '%s/images/Rural-Road.jpg',
+			'thumbnail_url' => '%s/images/Rural-Road.jpg',
+			'description'   => 'Rural Road'
 		),
 	));
 }

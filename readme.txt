@@ -6,7 +6,7 @@ Donate link: https://paypal.me/dhimaskirana
 Requires at least: 4.5
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 0.7
+Stable tag: 0.7.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -53,6 +53,8 @@ The header image resolution is 1920 pixels for width and 600 pixels for height.
 The featured image post resolution is 920 pixels for width and 300 pixels for height.
 
 == Changelog ==
+0.7.3
+- Update header image and license of image
 0.7.2
 - Update header image and license of image
 0.7.1
@@ -112,15 +114,10 @@ The featured image post resolution is 920 pixels for width and 300 pixels for he
 
 == Photo Credits ==
 
-All photos licensed under Unsplash License - https://unsplash.com/license
+All photos from Stocksnap.io licensed under Creative Commons CC0 License - https://stocksnap.io/license
 
-Tanah Lot - Photo by Harry Kessell - https://unsplash.com/@harrykessell
-Borobudur - Photo by Mario La Pergola - https://unsplash.com/@mlapergolaphoto
-Bromo - Photo by Kevin Zhang - https://unsplash.com/@shukaiz
-Padar Island - Photo by Rashel Ochoa - https://unsplash.com/@rashel8a
-Tugu Jogja - Photo by Angga Kurniawan - https://unsplash.com/@anggakrnwan
-SydneyBlur - Photo by Lubo Minar - https://unsplash.com/@bubo
-Los Angeles by Night - Photo by Henning Witzel - https://unsplash.com/@henning
-Shooting Star Rye - Photo by Kristopher Roller - https://unsplash.com/@krisroller
-Earth - Photo by NASA - https://unsplash.com/@nasa
-Tatra Mountains - Photo by Michał Parzuchowski - https://unsplash.com/@mparzuchowski
+Stars Night - Photo by Rakicevic Nenad - https://stocksnap.io/photo/stars-nightsky-PHOFG380TU
+Mountains - Photo by Elliott Chau - https://stocksnap.io/photo/mountains-mountain-AXGGPGUUML
+Sky Clouds - Photo by JJ Sky’s the Limit - https://stocksnap.io/photo/sky-clouds-T4VMNHJNY0
+Enchanting Forest - Photo by Johannes Plenio - https://stocksnap.io/photo/enchanting-forest-1CFKSWRR5X
+Rural Road - Photo by Matt Bango - https://stocksnap.io/photo/rural-road-DVPLJN9UMB

@@ -64,7 +64,7 @@ function mahal_documentation() {
                     <p><?php printf(
                             wp_kses(
                                 /* translators: %1$s: Mahal Themes Reviews Links %2$s: mailto links */
-                                __('If you like this theme, please <a href="%1$s" target="_blank">give a 5 stars review</a> in the WordPress Themes directory. Any ideas to add features to this theme? Feel free to <a href="%2$s" target="_blank">contact me</a>.', 'mahal'),
+                                __('If you like this theme, please <a href="%1$s" target="_blank">give a 5 stars review</a> in the WordPress Themes directory. Any ideas to add features to this theme? Feel free to <a href="%2$s" target="_blank">contact me</a> or visit Mahal Themes on <a href="%3$s" target="_blank">github</a>.', 'mahal'),
                                 array(
                                     'a' => array(
                                         'href' => array(),
@@ -73,7 +73,8 @@ function mahal_documentation() {
                                 )
                             ),
                             esc_url('https://wordpress.org/support/theme/mahal/reviews/'),
-                            'mailto:me@dhimaskirana.com?subject=About%20Mahal%20Theme&body=Hi%20Dhimas...'
+                            'mailto:me@dhimaskirana.com?subject=About%20Mahal%20Theme&body=Hi%20Dhimas...',
+                            esc_url('https://github.com/dhimaskirana/mahal')
                         ); ?></p>
                 </div>
 
