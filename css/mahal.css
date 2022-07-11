@@ -517,7 +517,9 @@ a:hover, a:focus, a:active {
 	width: auto;
 }
 
-.main-navigation ul ul ul {}
+.main-navigation ul ul ul {
+	top: 0;
+}
 
 .main-navigation ul ul a {
 	width: 200px;
@@ -587,6 +589,10 @@ a:hover, a:focus, a:active {
 .main-navigation.toggled li {
 	display: block;
 	float: none;
+}
+
+.main-navigation.toggled ul ul > li {
+	padding-left: 10px;
 }
 
 .main-navigation.toggled a {
@@ -925,16 +931,16 @@ a:hover, a:focus, a:active {
 	vertical-align: top;
 	background: var(--mahal-color-1);
 	color: white;
-	font-size: 32px;
-	line-height: 80px;
-	margin-left: -40px;
 	position: absolute;
-	top: -40px;
 	left: 50%;
+	border-radius: 50%;
 	text-align: center;
 	width: 80px;
 	height: 80px;
-	border-radius: 50%;
+	font-size: 32px;
+	line-height: 80px;
+	margin-left: -40px;
+	top: -40px;
 }
 
 .sticky, .hentry:hover {
@@ -1626,6 +1632,20 @@ img {
 @media screen and (min-width:320px) and (max-width:480px) {
 	html {
 		font-size: 85%;
+	}
+	.hentry:before {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 28px;
+		margin-left: -30px;
+		top: -30px;
+	}
+	.site-header .avatar {
+		width: 120px;
+		height: 120px;
+		margin-left: -60px;
+		margin-top: -60px;
 	}
 }
 
