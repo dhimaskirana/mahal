@@ -1240,7 +1240,9 @@ blockquote p {
 	list-style-type: none;
 }
 
-#respond {}
+#respond {
+    margin-top: 1em;
+}
 
 #reply-title {}
 
@@ -1256,8 +1258,7 @@ blockquote p {
 }
 
 #cancel-comment-reply-link:hover {
-	background: #e74c3c;
-	color: #fff;
+	text-decoration: underline;
 }
 
 #commentform {}
