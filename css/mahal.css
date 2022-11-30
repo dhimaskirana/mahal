@@ -1302,7 +1302,7 @@ blockquote p {
 .form-allowed-tags {}
 
 .form-submit {
-	text-align: center;
+	text-align: right;
 }
 
 .comment-content a {
