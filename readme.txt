@@ -6,7 +6,7 @@ Donate link: https://paypal.me/dhimaskirana
 Requires at least: 4.5
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 0.7.4
+Stable tag: 0.7.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
