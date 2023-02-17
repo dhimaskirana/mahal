@@ -55,6 +55,7 @@ The featured image post resolution is 920 pixels for width and 300 pixels for he
 == Changelog ==
 0.7.5
 - Fixing css on reply comment section
+- Fixing css on post/page pagination links
 0.7.4
 - Fixing responsive size for icon and image
 0.7.3

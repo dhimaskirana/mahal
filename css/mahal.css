@@ -591,7 +591,7 @@ a:hover, a:focus, a:active {
 	float: none;
 }
 
-.main-navigation.toggled ul ul > li {
+.main-navigation.toggled ul ul>li {
 	padding-left: 10px;
 }
 
@@ -627,6 +627,7 @@ a:hover, a:focus, a:active {
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
 		display: table;
 	}
@@ -667,15 +668,16 @@ a:hover, a:focus, a:active {
 	display: inline;
 }
 
-.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled {
+.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled, .page-links .post-page-numbers {
 	background-color: #f2f2f2;
 	color: #4D4D4D;
 	border-radius: 3px;
 	cursor: pointer;
 	padding: .5em 1em;
+	text-decoration: none;
 }
 
-.navigation li a:hover, .navigation li.active a {
+.navigation li a:hover, .navigation li.active a, .page-links .current, .page-links .post-page-numbers:hover {
 	color: #ffffff;
 	background-color: var(--mahal-color-1);
 }
@@ -1047,7 +1049,7 @@ blockquote {
 	border-left: .5em solid #ccc;
 	margin: 1em 0;
 	padding: 1em .5em;
-	quotes: "\201C""\201D""\2018""\2019";
+	quotes: "\201C" "\201D" "\2018" "\2019";
 	font-style: italic;
 }
 
@@ -1078,7 +1080,6 @@ blockquote p {
 }
 
 .page-content, .entry-content, .entry-summary {
-	margin: 1.5em 0 0;
 	padding: 0 2em;
 }
 
@@ -1088,7 +1089,10 @@ blockquote p {
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	display: flex;
+	align-items: center;
+	column-gap: 2px;
+	padding: 1em 0;
 }
 
 .site-footer {
@@ -1241,7 +1245,7 @@ blockquote p {
 }
 
 #respond {
-    margin-top: 1em;
+	margin-top: 1em;
 }
 
 #reply-title {}
@@ -1592,7 +1596,7 @@ img {
 }
 
 .end {
-	float: right!important
+	float: right !important
 }
 
 /* =Media query for 960 Screens - sets nested grids to 100%
@@ -1603,6 +1607,7 @@ img {
 		width: 100%;
 		margin-bottom: 20px
 	}
+
 	.row .row>div:last-child {
 		margin-bottom: 0 !important
 	}
@@ -1615,9 +1620,11 @@ img {
 	body {
 		font-size: 90%
 	}
+
 	.row {
-		margin-bottom: 0!important
+		margin-bottom: 0 !important
 	}
+
 	.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
 		width: 100%;
 		margin-right: 0;
@@ -1634,6 +1641,7 @@ img {
 	html {
 		font-size: 85%;
 	}
+
 	.hentry:before {
 		width: 60px;
 		height: 60px;
@@ -1642,6 +1650,7 @@ img {
 		margin-left: -30px;
 		top: -30px;
 	}
+
 	.site-header .avatar {
 		width: 120px;
 		height: 120px;
