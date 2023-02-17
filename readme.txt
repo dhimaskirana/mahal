@@ -6,7 +6,7 @@ Donate link: https://paypal.me/dhimaskirana
 Requires at least: 4.5
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 0.7.4
+Stable tag: 0.7.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -53,6 +53,9 @@ The header image resolution is 1920 pixels for width and 600 pixels for height.
 The featured image post resolution is 920 pixels for width and 300 pixels for height.
 
 == Changelog ==
+0.7.5
+- Fixing css on reply comment section
+- Fixing css on post/page pagination links
 0.7.4
 - Fixing responsive size for icon and image
 0.7.3
