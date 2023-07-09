@@ -53,6 +53,9 @@ The header image resolution is 1920 pixels for width and 600 pixels for height.
 The featured image post resolution is 920 pixels for width and 300 pixels for height.
 
 == Changelog ==
+0.8
+- Change Reset CSS to normalize.css
+- Fixing some style
 0.7.5
 - Fixing css on reply comment section
 - Fixing css on post/page pagination links

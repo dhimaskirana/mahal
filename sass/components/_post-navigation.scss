@@ -1,0 +1,67 @@
+.post-navigation {
+	margin: 0 0 1.5em;
+}
+
+.post-navigation .nav-links {
+	display: flex;
+}
+
+.post-navigation .nav-previous {
+	flex: 1 0 50%;
+}
+
+.post-navigation .nav-next {
+	text-align: end;
+	flex: 1 0 50%;
+}
+
+.navigation {
+	margin-bottom: 2em;
+}
+
+.navigation ul {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled, .page-links .post-page-numbers {
+	background-color: #f2f2f2;
+	color: #4D4D4D;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+
+.navigation li a:hover, .navigation li.active a, .page-links .current, .page-links .post-page-numbers:hover {
+	color: #ffffff;
+	background-color: $color_1;
+}
+
+.nav-links {
+	display: flex;
+    justify-content: space-between;
+}
+
+.nav-links a {
+	text-decoration: none;
+}
+
+.nav-links .nav-subtitle {
+	font-weight: bold;
+	color: #000;
+	font-size: .9em;
+}
+
+.nav-links .nav-title {
+	font-size: 1.1em;
+}

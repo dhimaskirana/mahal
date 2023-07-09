@@ -57,6 +57,6 @@ function mahal_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function mahal_customize_preview_js() {
-	wp_enqueue_script('mahal-customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), MAHAL_VERSION, true);
+	wp_enqueue_script('mahal-customizer', get_template_directory_uri() . '/assets/customizer.js', array('customize-preview'), MAHAL_VERSION, true);
 }
 add_action('customize_preview_init', 'mahal_customize_preview_js');

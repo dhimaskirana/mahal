@@ -1,0 +1,81 @@
+a, a:visited {
+	color: $color_1;
+}
+
+a:hover, a:focus, a:active {
+	color: $color_2;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li>ul, li>ol {
+	margin: .5em 0 0 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
+}
+
+blockquote {
+	background: #f9f9f9;
+	border-left: .5em solid #ccc;
+	margin: 1em 0;
+	padding: 1em .5em;
+	quotes: "\201C" "\201D" "\2018" "\2019";
+	font-style: italic;
+}
+
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: .05em;
+	vertical-align: -0.4em;
+}
+
+blockquote p {
+	display: inline;
+}

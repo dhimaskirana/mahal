@@ -1,0 +1,166 @@
+.no-comments {
+	font-size: 2em;
+	margin: 0;
+	padding: .5em;
+	text-align: center;
+	border-top: solid 2px;
+	border-bottom: solid 2px;
+}
+
+.comments-area {
+	background: #fff;
+	margin-bottom: 1em;
+	padding: 1em;
+	border-radius: 3px;
+	border: 1px solid #eee;
+}
+
+.comments-title {
+	margin-bottom: 1em;
+}
+
+.comment-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border-bottom: solid 1px #eee;
+	margin-bottom: 1em;
+}
+
+.pingback, .comment {
+	padding: 1em;
+	border-top: 1px solid #f1f1f1;
+	margin-bottom: 1em;
+}
+
+.comment-body {}
+
+.comment-meta a {
+	text-decoration: none;
+}
+
+.comment-meta a:hover {
+	color: #2c3e50;
+	border-bottom: solid 1px;
+}
+
+.comment-author {
+	margin-bottom: 5px;
+}
+
+.comment-author .avatar {
+	float: left;
+	border-radius: 50%;
+}
+
+.comment-author .fn {
+	font-size: 1.2em;
+	padding-left: 20px;
+}
+
+.comment-author .says {
+	display: none;
+}
+
+.comment-metadata {
+	padding-left: 50px;
+	font-size: .8em;
+}
+
+.comment-metadata a {
+	text-decoration: none;
+}
+
+.comment-content {
+	margin-top: 1em;
+	padding: .5em 0;
+}
+
+.reply a {
+	text-decoration: none;
+	font-weight: bold;
+	padding-bottom: .3em;
+	border: 1px solid;
+	padding: .5em;
+}
+
+.reply a:hover {
+	color: #2c3e50;
+}
+
+.children {
+	margin: 1em 0 0 0;
+	list-style-type: none;
+}
+
+#respond {
+	margin-top: 1em;
+}
+
+#reply-title {}
+
+#cancel-comment-reply-link {
+	border: 1px transparent solid;
+	padding: .5em;
+	text-decoration: none;
+	color: #e74c3c;
+	transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+}
+
+#cancel-comment-reply-link:hover {
+	text-decoration: underline;
+}
+
+#commentform {}
+
+#author, #email, #url, #comment {
+	display: block;
+	width: 100%;
+}
+
+#submit {}
+
+.comment-notes {
+	font-style: italic;
+}
+
+.required {}
+
+.comment-form-author {
+	overflow: hidden;
+	float: left;
+	width: 50%;
+	padding-right: .5em;
+}
+
+.comment-form-author label {}
+
+.comment-form-email {
+	overflow: hidden;
+	float: right;
+	width: 50%;
+	padding-left: .5em;
+}
+
+.comment-form-email label {}
+
+.comment-form-url {}
+
+.comment-form-url label {}
+
+.comment-form-comment {}
+
+.form-allowed-tags {}
+
+.form-submit {
+	text-align: right;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {}

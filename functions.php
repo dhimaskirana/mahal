@@ -10,7 +10,7 @@
 
 if (!defined('MAHAL_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('MAHAL_VERSION', '0.7');
+	define('MAHAL_VERSION', '0.8');
 }
 
 if (!function_exists('mahal_setup')) :
@@ -147,13 +147,13 @@ add_action('widgets_init', 'mahal_widgets_init');
  * Enqueue scripts and styles.
  */
 function mahal_scripts() {
-	// wp_enqueue_style('mahal-themes', get_stylesheet_uri(), array(), MAHAL_VERSION);
-	wp_enqueue_style('mahal-style', get_template_directory_uri() . '/css/mahal.css', array('dashicons'));
 	wp_enqueue_style('lato-font', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+	wp_enqueue_style('mahal-style', get_template_directory_uri() . '/assets/style.css', array('dashicons'), MAHAL_VERSION);
 
 	wp_style_add_data('mahal-style', 'rtl', 'replace');
 
-	wp_enqueue_script('mahal-navigation', get_template_directory_uri() . '/js/navigation.js', array(), MAHAL_VERSION, true);
+	wp_enqueue_script('mahal-navigation', get_template_directory_uri() . '/assets/navigation.js', array(), MAHAL_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');

@@ -1,0 +1,44 @@
+.site-header {}
+
+.site-header .row {
+	margin: 0;
+}
+
+.site-header .avatar {
+	border-radius: 99% 99% 99% 99%;
+	box-shadow: 0 0 0 6px #fff;
+	left: 50%;
+	margin-left: -75px;
+	margin-top: -75px;
+	position: absolute;
+	text-align: center;
+	z-index: 9;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+.site-branding {
+	padding: 4em 0 8em;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.site-title {
+	font-size: 2em;
+	margin: 1em 0 .5em;
+}
+
+.site-title a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.site-title a:hover {
+	border-bottom: solid #fff 2px;
+}
+
+.site-description {
+	margin: .5em 0 1em;
+}

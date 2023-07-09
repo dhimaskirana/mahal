@@ -1,0 +1,17 @@
+{
+    "name": "mahal",
+    "version": "0.8",
+    "description": "Mahal is free WordPress Themes. One column and fully responsive. Randomized header background.",
+    "scripts": {
+      "dev": "sass --watch ./sass/style.scss ./assets/style.css",
+      "build": "sass --style=compressed ./sass/style.scss ./assets/style.css",
+      "final": "dir-archiver --src . --dest ../mahal.zip --exclude sass .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
+    },
+    "author": "Dhimas Kirana",
+    "license": "GNU General Public License v2 or later",
+    "devDependencies": {
+      "dir-archiver": "^2.1.0",
+      "sass": "^1.61.0"
+    }
+  }
+  

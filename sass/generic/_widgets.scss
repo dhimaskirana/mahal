@@ -1,0 +1,19 @@
+.widget {
+	margin: 0 0 1.5em;
+	background-color: #fff;
+	padding: 1em;
+	border-radius: 3px;
+	border: 1px solid #eee;
+}
+
+/* Make sure select elements fit in widgets */
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+
+.widget_search .search-submit {
+	display: none;
+}

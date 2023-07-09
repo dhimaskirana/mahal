@@ -1,0 +1,201 @@
+.main-navigation-not-set {
+	text-align: center;
+	color: #fff;
+	padding: .5em 1em;
+}
+
+.main-navigation-not-set p {
+	margin: 0;
+}
+
+.main-navigation-not-set a {
+	display: inline !important;
+	padding: 0 !important;
+	color: #fff !important;
+	border-bottom: solid 1px #fff;
+}
+
+.main-navigation {
+	display: block;
+	background: #23282d;
+	width: 100%;
+	padding: .5em 0;
+}
+
+.main-navigation .row, .main-navigation .c12 {
+	margin: 0;
+}
+
+.main-navigation ul {
+	list-style: none;
+	margin: 0 auto;
+	display: none;
+	padding: 0;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-align: left;
+	text-decoration: none;
+	padding: .5em 1em;
+	color: #aaa;
+}
+
+.main-navigation li:hover>a, .main-navigation li:focus>a {
+	background-color: #32373c;
+	color: #fff;
+}
+
+.main-navigation .menu-item-has-children>a:after, .main-navigation .page_item_has_children>a:after {
+	padding-left: .3em;
+	content: '\f140';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 1em;
+	font-family: 'Dashicons';
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	vertical-align: top;
+}
+
+.main-navigation .sub-menu .menu-item-has-children>a:after, .main-navigation .sub-menu .page_item_has_children>a:after {
+	content: '\f139';
+}
+
+.main-navigation ul ul {
+	background: #32373c;
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+	float: left;
+	left: -999em;
+	top: 100%;
+	position: absolute;
+	z-index: 99999;
+	width: auto;
+}
+
+.main-navigation ul ul ul {
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+	border-top: none;
+}
+
+.main-navigation ul ul li {}
+
+.main-navigation ul ul :hover>a {}
+
+.main-navigation ul ul a:hover {}
+
+.main-navigation ul li.focus>ul, .main-navigation ul li:hover>ul {
+	display: block;
+	left: 0;
+}
+
+.main-navigation ul ul li:hover>ul, .main-navigation ul ul li.focus>ul {
+	display: block;
+	left: 100%;
+}
+
+.main-navigation li.current_page_item>a, .main-navigation li.current-menu-item>a {
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* Small menu. */
+
+.menu-toggle, .main-navigation.toggled ul {
+	display: block;
+}
+
+.menu-toggle {
+	display: block;
+	float: right;
+	box-shadow: none;
+	border-radius: 20%;
+	border: none;
+}
+
+.menu-toggle:hover {
+	background: #005aff;
+	color: #fff;
+}
+
+.menu-toggle:focus {
+	box-shadow: none;
+	background: #e74c3c;
+	color: #fff;
+}
+
+.main-navigation.toggled .dashicons-menu:before {
+	content: "\f158";
+}
+
+.main-navigation.toggled .primary-menu-list {
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.main-navigation.toggled ul {
+	margin: 0;
+}
+
+.main-navigation.toggled li {
+	display: block;
+	float: none;
+}
+
+.main-navigation.toggled ul ul>li {
+	padding-left: 10px;
+}
+
+.main-navigation.toggled a {
+	padding: .5em 20px;
+	width: 100%;
+}
+
+.main-navigation.toggled ul ul {
+	box-shadow: none;
+	float: none;
+	top: 100%;
+	position: relative;
+	height: 0;
+}
+
+.main-navigation.toggled ul li.focus>ul, .main-navigation ul li:hover>ul {
+	display: block;
+	left: 0;
+	height: auto;
+}
+
+.main-navigation.toggled .sub-menu .menu-item-has-children>a:after, .main-navigation.toggled .sub-menu .page_item_has_children>a:after {
+	content: '\f140';
+}
+
+.main-navigation.toggled ul ul li:hover>ul, .main-navigation.toggled ul ul li.focus>ul {
+	display: block;
+	left: 0;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: table;
+	}
+}
